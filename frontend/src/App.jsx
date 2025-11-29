@@ -10,8 +10,8 @@ function App() {
   const fetchData = async () => {
     try {
       // Try to fetch from backend
-      const forecastRes = await fetch('http://localhost:8000/api/forecast')
-      const nudgeRes = await fetch('http://localhost:8000/api/nudge')
+      const forecastRes = await fetch('https://finagent-api-kcmx.onrender.com/api/forecast')
+      const nudgeRes = await fetch('https://finagent-api-kcmx.onrender.com/api/nudge')
 
       if (!forecastRes.ok || !nudgeRes.ok) {
         throw new Error('Backend error')
@@ -70,7 +70,7 @@ function App() {
     }
 
     try {
-      const res = await fetch('http://localhost:8000/api/income', {
+      const res = await fetch('https://finagent-api-kcmx.onrender.com/api/income', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
